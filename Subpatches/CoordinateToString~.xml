@@ -113,9 +113,9 @@
    <NODE id="13" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
-   <BOUNDS type="Box" left="1035" top="5885" width="750" height="240">
+   <BOUNDS type="Box" left="1425" top="4715" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1035" top="5885" width="750" height="240">
+   <BOUNDS type="Node" left="1425" top="4715" width="750" height="240">
    </BOUNDS>
    <PIN pinname="Input String" visible="1">
    </PIN>
@@ -156,7 +156,7 @@
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="12" dstpinname="Input String">
    </LINK>
-   <BOUNDS type="Window" left="8415" top="4065" width="7035" height="8130">
+   <BOUNDS type="Window" left="8415" top="4065" width="7035" height="6855">
    </BOUNDS>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="1410" top="1065" width="1680" height="270">
