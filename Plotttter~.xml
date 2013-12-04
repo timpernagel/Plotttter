@@ -710,7 +710,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|PointsPerObject (BinSize)|">
    </PIN>
    </NODE>
-   <NODE id="213" componentmode="InAWindow" systemname="DrawEngine" filename="Subpatches\DrawEngine.v4p" nodename="Subpatches\DrawEngine.v4p" stayontop="0" debug="0">
+   <NODE id="213" componentmode="Hidden" systemname="DrawEngine" filename="Subpatches\DrawEngine.v4p" nodename="Subpatches\DrawEngine.v4p" stayontop="0" debug="0">
    <BOUNDS type="Node" left="12795" top="10755" width="5865" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="12795" top="10755" width="7705" height="12775">
@@ -1367,5 +1367,19 @@
    <LINK srcnodeid="308" srcpinname="Output" dstnodeid="213" dstpinname="PointsXY">
    </LINK>
    <LINK srcnodeid="231" srcpinname="Output Y" dstnodeid="233" dstpinname="Y">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="309" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="12195" top="11340" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12195" top="11340" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="213" srcpinname="Command" dstnodeid="309" dstpinname="Input String">
    </LINK>
    </PATCH>
