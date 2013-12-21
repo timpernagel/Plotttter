@@ -7,7 +7,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="19290" top="29040" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="20925" top="0" width="6705" height="5085">
+   <BOUNDS type="Window" left="1560" top="1155" width="6705" height="5085">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1463,7 +1463,7 @@
    <NODE id="31" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
    <PIN pinname="Input String" visible="1" slicecount="1" values="|PD 8712,5841;OA;|">
    </PIN>
-   <BOUNDS type="Box" left="7605" top="31350" width="1605" height="255">
+   <BOUNDS type="Box" left="7605" top="31350" width="2295" height="255">
    </BOUNDS>
    <BOUNDS type="Node" left="7605" top="31350" width="0" height="0">
    </BOUNDS>
@@ -1629,7 +1629,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="13410" top="24660" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="PU">
+   <PIN pinname="Input String" slicecount="1" values="|PU |">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>

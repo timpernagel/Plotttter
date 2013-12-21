@@ -1,9 +1,9 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.2.dtd" >
-   <PATCH nodename="C:\dev\RS232ToPlotter\Subpatches\CoordinateToString.v4p" systemname="CoordinateToString" filename="C:\dev\RS232ToPlotter\Subpatches\CoordinateToString.v4p">
+   <PATCH nodename="C:\dev\Plotttter\Subpatches\CoordinateToString.v4p" systemname="CoordinateToString" filename="C:\dev\RS232ToPlotter\Subpatches\CoordinateToString.v4p">
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="3">
-   <BOUNDS type="Node" left="1425" top="2130" width="100" height="100">
+   <BOUNDS type="Node" left="4860" top="4710" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1425" top="2130" width="1080" height="240">
+   <BOUNDS type="Box" left="4860" top="4710" width="1080" height="240">
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -11,31 +11,7 @@
    </PIN>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   </NODE>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="4">
-   <BOUNDS type="Node" left="3015" top="2130" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3015" top="2130" width="1080" height="240">
-   </BOUNDS>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Y Input Value" visible="1">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" values="10000">
-   </PIN>
-   </NODE>
-   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="1425" top="3810" width="1635" height="270">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="Comma">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
+   <PIN pinname="Descriptive Name" slicecount="1" values="ValueOutput">
    </PIN>
    </NODE>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="7">
@@ -111,13 +87,13 @@
    </PIN>
    </NODE>
    <NODE id="13" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   <PIN pinname="Descriptive Name" slicecount="1" values="StringOutput">
    </PIN>
-   <BOUNDS type="Box" left="1425" top="4715" width="750" height="240">
+   <BOUNDS type="Box" left="1425" top="4710" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1425" top="4715" width="750" height="240">
+   <BOUNDS type="Node" left="1425" top="4710" width="750" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" visible="1">
+   <PIN pinname="Input String" visible="1" slicecount="1" values="|3831,4799|">
    </PIN>
    </NODE>
    <NODE id="15" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
@@ -130,14 +106,6 @@
    </NODE>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Destination Maximum">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="3" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="5" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="5" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="10" dstpinname="Input String">
    </LINK>
    <NODE id="17" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
@@ -149,10 +117,6 @@
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Destination Maximum">
-   </LINK>
-   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="4" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="12" dstpinname="Input String">
    </LINK>
@@ -183,6 +147,44 @@
    <LINK srcnodeid="18" srcpinname="X" dstnodeid="7" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="18" srcpinname="Y" dstnodeid="8" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="9" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="11" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="4860" top="2925" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="21" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="21" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="XY" dstnodeid="3" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Zip (String)" nodename="Zip (String)" componentmode="Hidden" id="5" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS type="Node" left="1425" top="3810" width="1635" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Intersperse" visible="-1" pintype="Input">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Intersperse String" visible="-1" pintype="Input">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="5" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="5" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="13" dstpinname="Input String">
    </LINK>
